@@ -1,0 +1,43 @@
+\ProvidesPackage{textbook}[11/02/2014 textbook style by Julia]
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[russian,english]{babel}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\RequirePackage{url}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{multirow}
+\RequirePackage{bbold}
+\RequirePackage[linkbordercolor={0 0 1}]{hyperref}
+\RequirePackage{cmap} %search
+
+\linespread{1.1}
+
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\addto\captionsrussian{\renewcommand{\refname}{Источники}}
+
+% pics
+%\usepackage[pdftex]{graphics}
+\usepackage[pdftex]{floatflt, graphicx}
+\graphicspath{{./images/}}
+\DeclareGraphicsExtensions{.pdf,.jpg,.png,.svg}
+
+\RequirePackage[font=footnotesize]{caption}
+\RequirePackage{subcaption}
+\RequirePackage{placeins}
+\RequirePackage{wrapfig}
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{center} % Right align
+{\LARGE\@title} % Increase the font size of the title
+
+\vspace{50pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\\\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{center}
+}
